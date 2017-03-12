@@ -1,0 +1,174 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #747474;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#game-window {
+  margin: 25px auto 0;
+  height: 700px;
+  width: 700px;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 10px 5px;
+}
+
+#score,
+#high-score,
+#lives {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+#score span:first-child,
+#high-score span:first-child,
+#lives span:first-child {
+  color: #f00;
+}
+
+#game {
+  margin: 0 auto;
+  width: 640px;
+  height: 590px;
+  clear: both;
+}
+
+.platform-background {
+  background-image: url('../images/brick.png');
+  height: 32px;
+  width: 64px;
+}
+
+#hostage {
+  background-image: url('../images/brick.png');
+  height: 32px;
+  width: 240px;
+  position: absolute;
+  top: 96px;
+}
+
+#platform-1 {
+  position: absolute;
+  top: 192px;
+}
+#platform-2 {
+  position: absolute;
+  left: 64px;
+  top: 192px;
+}
+#platform-3 {
+  position: absolute;
+  left: 128px;
+  top: 200px;
+}
+#platform-4 {
+  position: absolute;
+  left: 192px;
+  top: 208px;
+}
+#platform-5 {
+  position: absolute;
+  left: 256px;
+  top: 216px;
+}
+#platform-6 {
+  position: absolute;
+  left: 320px;
+  top: 224px;
+}
+#platform-7 {
+  position: absolute;
+  left: 384px;
+  top: 232px;
+}
+#platform-8 {
+  position: absolute;
+  left: 448px;
+  top: 240px;
+}
+#platform-9 {
+  position: absolute;
+  left: 512px;
+  top: 248px;
+}
+#platform-10 {
+  position: absolute;
+  left: 576px;
+  top: 256px;
+}
+
+#platform-11 {
+  position: absolute;
+  left: 576px;
+  top: 352px;
+}
+#platform-12 {
+  position: absolute;
+  left: 512px;
+  top: 352px;
+}
+#platform-13 {
+  position: absolute;
+  left: 448px;
+  top: 360px;
+}
+#platform-14 {
+  position: absolute;
+  left: 384px;
+  top: 360px;
+}
+#platform-15 {
+  position: absolute;
+  left: 320px;
+  top: 368px;
+}
+#platform-16 {
+  position: absolute;
+  left: 256px;
+  top: 368px;
+}
+#platform-17 {
+  position: absolute;
+  left: 192px;
+  top: 376px;
+}
+#platform-18 {
+  position: absolute;
+  left: 128px;
+  top: 376px;
+}
+#platform-19 {
+  position: absolute;
+  left: 64px;
+  top: 384px;
+}
+#platform-20 {
+  position: absolute;
+  left: 0px;
+  top: 384px;
+}
+
+#grid {
+  width: 640px;
+  heigh: 590px;
+  position: relative;
+  top: 0px;
+}
+
+.grid-cell {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0;
+  /*background-color: #fff;*/
+  position: relative;
+}

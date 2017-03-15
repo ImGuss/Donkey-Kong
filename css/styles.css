@@ -1,6 +1,6 @@
 body {
   font-family: 'Press Start 2P', cursive;
-  background-color: #747474;
+  background-color: #404040;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -8,12 +8,12 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 12px;
+  font-size: 16px;
 }
 
 #game-window {
-  margin: 25px auto 0;
-  height: 700px;
+  margin: 16px auto 0;
+  height: 640px;
   width: 700px;
   background-color: #000;
   border: 1px solid #000;
@@ -53,10 +53,11 @@ h1 {
   height: 32px;
   width: 240px;
   position: absolute;
+  left: 400px;
   top: 96px;
 }
 
-#platform-1 {
+/*#platform-1 {
   position: absolute;
   top: 192px;
 }
@@ -73,89 +74,190 @@ h1 {
 #platform-4 {
   position: absolute;
   left: 192px;
-  top: 208px;
+  top: 200px;
 }
 #platform-5 {
   position: absolute;
   left: 256px;
-  top: 216px;
+  top: 208px;
 }
 #platform-6 {
   position: absolute;
   left: 320px;
-  top: 224px;
+  top: 208px;
 }
 #platform-7 {
   position: absolute;
   left: 384px;
-  top: 232px;
+  top: 216px;
 }
 #platform-8 {
   position: absolute;
   left: 448px;
-  top: 240px;
+  top: 216px;
 }
 #platform-9 {
   position: absolute;
   left: 512px;
-  top: 248px;
+  top: 224px;
 }
 #platform-10 {
   position: absolute;
   left: 576px;
-  top: 256px;
-}
+  top: 224px;
+}*/
 
 #platform-11 {
   position: absolute;
   left: 576px;
-  top: 352px;
+  top: 192px;
 }
 #platform-12 {
   position: absolute;
   left: 512px;
-  top: 352px;
+  top: 192px;
 }
 #platform-13 {
   position: absolute;
   left: 448px;
-  top: 360px;
+  top: 200px;
 }
 #platform-14 {
   position: absolute;
   left: 384px;
-  top: 360px;
+  top: 200px;
 }
 #platform-15 {
   position: absolute;
   left: 320px;
-  top: 368px;
+  top: 208px;
 }
 #platform-16 {
   position: absolute;
   left: 256px;
-  top: 368px;
+  top: 208px;
 }
 #platform-17 {
   position: absolute;
   left: 192px;
-  top: 376px;
+  top: 216px;
 }
 #platform-18 {
   position: absolute;
   left: 128px;
-  top: 376px;
+  top: 216px;
 }
 #platform-19 {
   position: absolute;
   left: 64px;
-  top: 384px;
+  top: 224px;
 }
 #platform-20 {
   position: absolute;
   left: 0px;
+  top: 224px;
+}
+#platform-21 {
+  position: absolute;
+  left: 0px;
+  top: 352px;
+}
+#platform-22 {
+  position: absolute;
+  left: 64px;
+  top: 352px;
+}
+#platform-23 {
+  position: absolute;
+  left: 128px;
+  top: 360px;
+}
+#platform-24 {
+  position: absolute;
+  left: 192px;
+  top: 360px;
+}
+#platform-25 {
+  position: absolute;
+  left: 256px;
+  top: 368px;
+}
+#platform-26 {
+  position: absolute;
+  left: 320px;
+  top: 368px;
+}
+#platform-27 {
+  position: absolute;
+  left: 384px;
+  top: 376px;
+}
+#platform-28 {
+  position: absolute;
+  left: 448px;
+  top: 376px;
+}
+#platform-29 {
+  position: absolute;
+  left: 512px;
   top: 384px;
 }
+#platform-30 {
+  position: absolute;
+  left: 576px;
+  top: 384px;
+}
+#platform-31 {
+  position: absolute;
+  left: 576px;
+  top: 512px;
+}
+#platform-32 {
+  position: absolute;
+  left: 512px;
+  top: 512px;
+}
+#platform-33 {
+  position: absolute;
+  left: 448px;
+  top: 520px;
+}
+#platform-34 {
+  position: absolute;
+  left: 384px;
+  top: 520px;
+}
+#platform-35 {
+  position: absolute;
+  left: 320px;
+  top: 528px;
+}
+#platform-36 {
+  position: absolute;
+  left: 256px;
+  top: 528px;
+}
+#platform-37 {
+  position: absolute;
+  left: 192px;
+  top: 536px;
+}
+#platform-38 {
+  position: absolute;
+  left: 128px;
+  top: 536px;
+}
+#platform-39 {
+  position: absolute;
+  left: 64px;
+  top: 544px;
+}
+#platform-40 {
+  position: absolute;
+  left: 0px;
+  top: 544px;
+}
+
 
 #grid {
   width: 640px;
@@ -171,4 +273,23 @@ h1 {
   margin: 0;
   /*background-color: #fff;*/
   position: relative;
+}
+
+#boxy {
+  /*border: 1px solid white;*/
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 320px;
+  left: 64px;
+  background-image: url('../images/princess-left.png');
+}
+
+#mario {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 64px;
+  left: 432px;
+  background-image: url('../images/mario.png');
 }

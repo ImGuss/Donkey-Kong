@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- RETRO FONT FROM GOOGLE -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <!-- MY CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Donkey Kong</title>
+</head>
+  <body>
+    <h1>DONKEY KONG</h1>
+    <!-- begin game window -->
+    <div id="game-window">
+
+      <!-- stats -->
+      <div id="stats">
+        <div id="score">
+          <span>SCORE</span><br>
+          <span id="score-span">00000000</span>
+        </div>
+        <div id="high-score">
+          <span>HIGH SCORE</span><br>
+          <span id="high-score-span">000000000</span>
+        </div>
+        <div id="lives">
+          <span>LIVES</span><br>
+          <span id="lives-span">3</span>
+        </div>
+      </div>
+      <!-- end stats -->
+      <div id="game-won" class="game-won-block">
+        <span>YOU WON!!!!</span>
+      </div>
+      <div id="game-lost" class="game-lost-block">
+        <span>YOU LOST!!!!</span>
+      </div>
+
+
+      <!-- begin game -->
+      <div id="game">
+          <canvas id="canvas" width="640" height="590"></canvas>
+      </div>
+    </div>
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- CONSTRUCTORS JAVASCRIPT -->
+  <script type="text/javascript" src="js/constructors.js"></script>
+  <!-- DOM JAVASCRIPT -->
+  <script type="text/javascript" src="js/dom.js"></script>
+  <!-- BARREL JAVASCRIPT -->
+  <script type="text/javascript" src="js/barrel.js"></script>
+  <!-- APPLICATION JAVASCRIPT -->
+  <script type="text/javascript" src="js/application.js"></script>
+  <!-- MOVE JAVASCRIPT -->
+  <script type="text/javascript" src="js/move.js"></script>
+  <!-- COLLISION JAVASCRIPT -->
+  <script type="text/javascript" src="js/collision.js"></script>
+  </body>
+</html>

@@ -87,7 +87,8 @@ function Princess() {
 
 // Checks if game was won
 Princess.prototype.gameWon = function() {
-  if (this.x === 420 && this.y === 64) {
+  if (this.x <= 420 && this.y <= 64) {
+    this.getMario = true;
     $('#game-won').removeClass('game-won-block');
   }
   return;

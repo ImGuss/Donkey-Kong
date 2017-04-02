@@ -53,32 +53,16 @@ h1 {
   width: 64px;
 }
 
-#game-won {
-  background-color: rgba(156, 156, 156, 0.72);
-  position: absolute;
-  width: 700px;
-  height: 590px;
-  text-align: center;
-}
-
 .game-won-block {
   display: none;
-}
-
-#game-lost {
-  background-color: rgba(156, 156, 156, 0.72);
-  position: absolute;
-  vertical-align: middle;
-  margin: auto;
-  width: 700px;
-  height: 590px;
-  text-align: center;
 }
 
 .game-lost-block {
   display: none;
 }
 
+#game-won,
+#game-lost,
 .begin-game {
   position: fixed;
   top: 0px;
@@ -87,7 +71,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0);
 }
 
-#button {
+button {
   font-family: 'Press Start 2P', cursvie;
   color: red;
   display: block;

@@ -16,14 +16,7 @@ var leftDown,
     spaceDown;
 
 
-
-
-// MOVE FUNCTIONS
-
-
-// try to make is to that when left or right is pushed it sets a something equal to true and if that's true then move right or left and if it's false (i.e on keyup) then it stops moving
-
-
+// Check if keys are being pressed
 $(window).keydown(function(e) {
   if (e.keyCode === left || e.keyCode === wasdLeft) {
     leftDown = true;
@@ -42,6 +35,7 @@ $(window).keydown(function(e) {
   }
 });
 
+// Check if keys are let go
 $(window).keyup(function(e) {
   if (e.keyCode === left || e.keyCode === wasdLeft) {
     leftDown = false;
@@ -61,41 +55,42 @@ $(window).keyup(function(e) {
 });
 
 
+// Used for the jump function below. Needs to be global
 var count = 0;
+// Used for the fall function below. needs to be global
 var gravity;
 
 
-// MOVE LEFT
+// MOVE FUNCTIONS
 
 setInterval(function(){
-  if (leftDown === true) {
-    peach.x -= 8;
 
+  // MOVE LEFT
+
+  if (leftDown === true) {
+    peach.x -= 4;
+
+    // Checks if on first or third level
     if (peach.y > 416 || peach.y < 256) {
+      // Checks if there's an incline
       if (peach.x === 104 || peach.x === 232 || peach. x === 360 || peach.x === 488) {
         peach.y += 8;
       }
     }
+    // Checks if on second level
     else if (peach.y < 416 || peach.y > 256) {
+      // Checks if there's an incline
       if (peach.x === 120 || peach.x === 248 || peach. x === 376 || peach.x === 504) {
         peach.y -= 8;
       }
     }
-
-    console.log("Peach X:");
-    console.log(peach.x);
-    console.log("Peach Y:");
-    console.log(peach.y);
-    // return;
-  } else {
-    // return;
   }
 
 
-// MOVE RIGHT
+  // MOVE RIGHT
 
   if (rightDown === true) {
-    peach.x += 8;
+    peach.x += 4;
 
     if (peach.y > 416 || peach.y < 256) {
       if (peach.x === 104 || peach.x === 232 || peach. x === 360 || peach.x === 488) {
@@ -107,16 +102,10 @@ setInterval(function(){
         peach.y += 8;
       }
     }
-
-    console.log("Peach X:");
-    console.log(peach.x);
-    console.log("Peach Y:");
-    console.log(peach.y);
-
   }
 
 
-// CLIMB UP
+  // CLIMB UP
 
   if (upDown === true) {
     if ((peach.x >= 152 && peach.x <= 168) && (peach.y <= 504 && peach.y > 328) ||
@@ -129,7 +118,7 @@ setInterval(function(){
   }
 
 
-// CLIMB DOWN
+  // CLIMB DOWN
 
   if (downDown === true) {
     if ((peach.x >= 152 && peach.x <= 168) && (peach.y < 504 && peach.y >= 328) ||
@@ -142,27 +131,27 @@ setInterval(function(){
   }
 
 
-// JUMP
+  // JUMP
 
-if (spaceDown === true) {
-  count++;
-  gravity = 6;
-  if (count === 1) {
+  if (spaceDown === true) {
+    count++;
+    gravity = 6;
+    if (count === 1) {
 
-    peach.y -= 48;
+      peach.y -= 48;
+    }
   }
-}
 
-// FALL
+  // FALL
 
-if (spaceDown === false && count > 0) {
-  if (gravity === 0) {
-    count = 0;
-    return;
-  } else {
-    peach.y += 8;
-    gravity --;
+  if (spaceDown === false && count > 0) {
+    if (gravity === 0) {
+      count = 0;
+      return;
+    } else {
+      peach.y += 8;
+      gravity --;
+    }
   }
-}
 
 }, 60);

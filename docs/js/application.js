@@ -25,7 +25,17 @@
   princess.src = princessSprite;
 
 
-$(document).ready(function() {
+function startGame() {
+  if (peach.lives <= 0 || peach.getMario === true) {
+    peach.gameWon();
+    peach.gameLost();
+  } else {
+    moveBarrels();
+    animate();
+  }
+}
+
+function animate(){
 
   // Animation
   setInterval(function() {
@@ -113,13 +123,22 @@ $(document).ready(function() {
     barrel1.draw();
     barrel2.draw();
     barrel3.draw();
+    barrel4.draw();
+    barrel5.draw();
 
-    peach.gameLost();
-    peach.gameWon();
+    barrel1.collided = false;
+    barrel2.collided = false;
+    barrel3.collided = false;
+    barrel4.collided = false;
+    barrel5.collided = false;
+    barrel6.collided = false;
+    barrel7.collided = false;
+    barrel8.collided = false;
+    barrel9.collided = false;
+    barrel10.collided = false;
 
     changeScore();
     changeLives();
 
   }, 30);
-
-});
+}

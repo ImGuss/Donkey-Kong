@@ -4,6 +4,7 @@ function Barrel() {
   this.x = 640;
   this.y = 160;
   var that = this;
+  this.collided = false;
 
   this.move = function() {
     setInterval(function() {
@@ -56,21 +57,14 @@ function Barrel() {
   };
 
   this.checkCollision = function() {
-    if (
-      that.x === peach.x && that.y === peach. y
-       )
-        // peach.x === barrel2.x ||
-        // peach.x === barrel3.x ||
-        // peach.x === barrel4.x ||
-        // peach.x === barrel5.x ||
-        // peach.x === barrel6.x ||
-        // peach.x === barrel7.x ||
-        // peach.x === barrel8.x ||
-        // peach.x === barrel9.x ||
-        // peach.x === barrel10.x)
-        {
-      peach.lives -= 1;
-      console.log(peach.lives);
+    if (that.collided === false) {
+      if (
+        (that.x >= peach.x && that.x <= (peach.x + 32)) &&
+        (that.y >= peach.y && that.y <= peach.y + 32)
+         ){
+        peach.lives -= 1;
+        that.collided = true;
+      }
     }
   };
 }
@@ -90,24 +84,43 @@ var barrel10 = new Barrel();
 
 // var delay = Math.floor(Math.random() * 4) * 1000;
 
-barrel1.move();
+function moveBarrels(){
 
-setTimeout(function() {
-  // barrel2 = new Barrel();
-  barrel2.move();
-  console.log('BARREL 2 X');
-  console.log(barrel2.x);
-  console.log('BARREL 2 Y');
-  console.log(barrel2.y);
-  console.log('this works');
-}, 2000);
+  barrel1.move();
 
-setTimeout(function() {
-  // barrel3 = new Barrel();
-  barrel3.move();
-  console.log('BARREL 3 X');
-  console.log(barrel3.x);
-  console.log('BARREL 3 Y');
-  console.log(barrel3.y);
-  console.log('this works');
-}, 4000);
+  setTimeout(function() {
+    barrel2.move();
+    // console.log('BARREL 2 X');
+    // console.log(barrel2.x);
+    // console.log('BARREL 2 Y');
+    // console.log(barrel2.y);
+    // console.log('this works');
+  }, 2000);
+
+  setTimeout(function() {
+    barrel3.move();
+    // console.log('BARREL 3 X');
+    // console.log(barrel3.x);
+    // console.log('BARREL 3 Y');
+    // console.log(barrel3.y);
+    // console.log('this works');
+  }, 4000);
+
+  setTimeout(function() {
+    barrel4.move();
+    // console.log('BARREL 4 X');
+    // console.log(barrel4.x);
+    // console.log('BARREL 4 Y');
+    // console.log(barrel4.y);
+    // console.log('this works');
+  }, 6000);
+
+  setTimeout(function() {
+    barrel5.move();
+    // console.log('BARREL 5 X');
+    // console.log(barrel5.x);
+    // console.log('BARREL 5 Y');
+    // console.log(barrel5.y);
+    // console.log('this works');
+  }, 8000);
+}

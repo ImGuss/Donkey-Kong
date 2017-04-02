@@ -56,8 +56,8 @@ h1 {
 #game-won {
   background-color: rgba(156, 156, 156, 0.72);
   position: absolute;
-  width: 640;
-  height: 590;
+  width: 700px;
+  height: 590px;
   text-align: center;
 }
 
@@ -69,14 +69,29 @@ h1 {
   background-color: rgba(156, 156, 156, 0.72);
   position: absolute;
   vertical-align: middle;
-  top: 85px;
-  left: 113px;
   margin: auto;
-  width: 640px;
+  width: 700px;
   height: 590px;
   text-align: center;
 }
 
 .game-lost-block {
   display: none;
+}
+
+.begin-game {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#button {
+  font-family: 'Press Start 2P', cursvie;
+  color: red;
+  display: block;
+  margin: 25% auto;
+  border-radius: 10px;
+  background-color: black;
 }

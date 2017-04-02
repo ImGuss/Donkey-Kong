@@ -42,7 +42,7 @@ $(document).ready(function() {
   // MOVE RIGHT
   $(window).keydown(function(e) {
     if (e.keyCode === right || e.keyCode === wasdRight) {
-      peach.x += 4;
+      peach.x += 8;
 
       if (peach.y > 416 || peach.y < 256) {
         if (peach.x === 104 || peach.x === 232 || peach. x === 360 || peach.x === 488) {
@@ -92,9 +92,25 @@ $(document).ready(function() {
   });
 
   // JUMP
+  var count = 0;
   $(window).keydown(function(e) {
     if (e.keyCode === space) {
-      peach.y -= 32;
+      count ++;
+      if (count === 1) {
+        peach.y -= 48;
+      }else {
+        return;
+      }
+
+    }
+    return;
+  });
+
+  $(window).keyup(function(e) {
+    if (e.keyCode === space) {
+      count = 0;
+
+      peach.y += 48;
     }
     return;
   });

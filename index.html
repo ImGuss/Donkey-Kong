@@ -9,6 +9,12 @@
   <title>Donkey Kong</title>
 </head>
   <body>
+
+    <div class="begin-game">
+      <button type="button" name="button" id="button">Begin Game</button>
+    </div>
+
+
     <h1>DONKEY KONG</h1>
     <!-- begin game window -->
     <div id="game-window">
@@ -29,12 +35,15 @@
         </div>
       </div>
       <!-- end stats -->
+
+      <!-- game won/game lost messages -->
       <div id="game-won" class="game-won-block">
         <span>YOU WON!!!!</span>
       </div>
       <div id="game-lost" class="game-lost-block">
         <span>YOU LOST!!!!</span>
       </div>
+      <!-- end game won/game lost messages -->
 
 
       <!-- begin game -->
@@ -55,7 +64,5 @@
   <script type="text/javascript" src="js/application.js"></script>
   <!-- MOVE JAVASCRIPT -->
   <script type="text/javascript" src="js/move.js"></script>
-  <!-- COLLISION JAVASCRIPT -->
-  <script type="text/javascript" src="js/collision.js"></script>
   </body>
 </html>

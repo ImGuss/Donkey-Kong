@@ -25,7 +25,17 @@
   princess.src = princessSprite;
 
 
-$(document).ready(function() {
+function startGame() {
+  if (peach.lives <= 0 || peach.getMario === true) {
+    peach.gameWon();
+    peach.gameLost();
+  } else {
+    moveBarrels();
+    animate();
+  }
+}
+
+function animate(){
 
   // Animation
   setInterval(function() {
@@ -113,13 +123,11 @@ $(document).ready(function() {
     barrel1.draw();
     barrel2.draw();
     barrel3.draw();
-
-    peach.gameLost();
-    peach.gameWon();
+    barrel4.draw();
+    barrel5.draw();
 
     changeScore();
     changeLives();
 
   }, 30);
-
-});
+}

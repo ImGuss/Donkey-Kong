@@ -1,0 +1,24 @@
+var princessCont  asdf  ?  asdf  : cfds
+
+^^^^ maybe
+
+
+
+make an object that has an array of position
+then when the princess is left it changes the position of the sprite based on if it's going left or right
+
+example
+
+princess = {
+
+
+  this.spritePosition = [0, 0, 32, 32],
+}
+
+if (left) {
+  peach.spritePosition = [32, 32, 32, 32]
+} else if (right) {
+  peach.spritePosition = [0, 0, 32, 32]
+}
+
+oooor you can change the specific index

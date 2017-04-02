@@ -126,6 +126,17 @@ function animate(){
     barrel4.draw();
     barrel5.draw();
 
+    barrel1.collided = false;
+    barrel2.collided = false;
+    barrel3.collided = false;
+    barrel4.collided = false;
+    barrel5.collided = false;
+    barrel6.collided = false;
+    barrel7.collided = false;
+    barrel8.collided = false;
+    barrel9.collided = false;
+    barrel10.collided = false;
+
     changeScore();
     changeLives();
 

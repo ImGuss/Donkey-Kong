@@ -4,6 +4,7 @@ function Barrel() {
   this.x = 640;
   this.y = 160;
   var that = this;
+  this.collided = false;
 
   this.move = function() {
     setInterval(function() {
@@ -56,12 +57,13 @@ function Barrel() {
   };
 
   this.checkCollision = function() {
-    if (collided === true) {
+    if (that.collided === false) {
       if (
         (that.x >= peach.x && that.x <= (peach.x + 32)) &&
         (that.y >= peach.y && that.y <= peach.y + 32)
          ){
         peach.lives -= 1;
+        that.collided = true;
       }
     }
   };
@@ -88,37 +90,37 @@ function moveBarrels(){
 
   setTimeout(function() {
     barrel2.move();
-    console.log('BARREL 2 X');
-    console.log(barrel2.x);
-    console.log('BARREL 2 Y');
-    console.log(barrel2.y);
-    console.log('this works');
+    // console.log('BARREL 2 X');
+    // console.log(barrel2.x);
+    // console.log('BARREL 2 Y');
+    // console.log(barrel2.y);
+    // console.log('this works');
   }, 2000);
 
   setTimeout(function() {
     barrel3.move();
-    console.log('BARREL 3 X');
-    console.log(barrel3.x);
-    console.log('BARREL 3 Y');
-    console.log(barrel3.y);
-    console.log('this works');
+    // console.log('BARREL 3 X');
+    // console.log(barrel3.x);
+    // console.log('BARREL 3 Y');
+    // console.log(barrel3.y);
+    // console.log('this works');
   }, 4000);
 
   setTimeout(function() {
     barrel4.move();
-    console.log('BARREL 4 X');
-    console.log(barrel4.x);
-    console.log('BARREL 4 Y');
-    console.log(barrel4.y);
-    console.log('this works');
+    // console.log('BARREL 4 X');
+    // console.log(barrel4.x);
+    // console.log('BARREL 4 Y');
+    // console.log(barrel4.y);
+    // console.log('this works');
   }, 6000);
 
   setTimeout(function() {
     barrel5.move();
-    console.log('BARREL 5 X');
-    console.log(barrel5.x);
-    console.log('BARREL 5 Y');
-    console.log(barrel5.y);
-    console.log('this works');
+    // console.log('BARREL 5 X');
+    // console.log(barrel5.x);
+    // console.log('BARREL 5 Y');
+    // console.log(barrel5.y);
+    // console.log('this works');
   }, 8000);
 }

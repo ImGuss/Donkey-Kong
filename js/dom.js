@@ -6,6 +6,10 @@ function changeScore() {
   $('#score-span').html(peach.score);
 }
 
+function changeHighScore() {
+  $('#high-score-span').html(peach.highScore);
+}
+
 $('#begin-game').click(function() {
   $('.begin-game').addClass('game-won-block');
   startGame();

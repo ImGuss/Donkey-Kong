@@ -69,6 +69,16 @@ function Barrel() {
       }
     }
   };
+
+  this.addScore = function() {
+    if (
+      (that.x >= peach.x && that.x <= (peach.x + 32)) &&
+      (that.y >= (peach.y + 37) && that.y <= (peach.y + 70))
+      ) {
+      peach.score += 10;
+    }
+  };
+
 }
 
 var barrel1  = new Barrel();

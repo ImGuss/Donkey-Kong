@@ -10,9 +10,21 @@
 </head>
   <body>
 
+    <!-- beging game button -->
     <div class="begin-game">
-      <button type="button" name="button" id="button">Begin Game</button>
+      <button type="button" name="button" id="begin-game">Begin Game</button>
     </div>
+    <!-- end begin game button -->
+
+
+    <!-- game won/game lost messages -->
+    <div id="game-won" class="game-won-block">
+      <button type="button" name="win-game" id="win-game">You won! Play again?</button>
+    </div>
+    <div id="game-lost" class="game-lost-block">
+      <button type="button" name="lose-game" id="lose-game">You lost! Try again?</button>
+    </div>
+    <!-- end game won/game lost messages -->
 
 
     <h1>DONKEY KONG</h1>
@@ -36,15 +48,6 @@
       </div>
       <!-- end stats -->
 
-      <!-- game won/game lost messages -->
-      <div id="game-won" class="game-won-block">
-        <span>YOU WON!!!!</span>
-      </div>
-      <div id="game-lost" class="game-lost-block">
-        <span>YOU LOST!!!!</span>
-      </div>
-      <!-- end game won/game lost messages -->
-
 
       <!-- begin game -->
       <div id="game">
@@ -60,6 +63,8 @@
   <script type="text/javascript" src="js/dom.js"></script>
   <!-- BARREL JAVASCRIPT -->
   <script type="text/javascript" src="js/barrel.js"></script>
+  <!-- SCORE JAVASCRIPT -->
+  <script type="text/javascript" src="js/score.js"></script>
   <!-- APPLICATION JAVASCRIPT -->
   <script type="text/javascript" src="js/application.js"></script>
   <!-- MOVE JAVASCRIPT -->

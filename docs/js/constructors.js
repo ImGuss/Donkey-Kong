@@ -79,6 +79,10 @@ function Princess() {
   this.y = 512;
 
   this.score = 0;
+
+  this.highScore = (localStorage.highScore === undefined) ? 0 : localStorage.highScore;
+
+
   this.lives = 3;
 
   this.getMario = false;
@@ -87,7 +91,8 @@ function Princess() {
 
 // Checks if game was won
 Princess.prototype.gameWon = function() {
-  if (this.x === 420 && this.y === 64) {
+  if (this.x <= 420 && this.y <= 64) {
+    this.getMario = true;
     $('#game-won').removeClass('game-won-block');
   }
   return;

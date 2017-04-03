@@ -79,6 +79,10 @@ function Princess() {
   this.y = 512;
 
   this.score = 0;
+
+  this.highScore = (localStorage.highScore === undefined) ? 0 : localStorage.highScore;
+
+
   this.lives = 3;
 
   this.getMario = false;

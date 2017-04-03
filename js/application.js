@@ -38,6 +38,7 @@ function animate(){
     if (peach.lives <= 0 || peach.getMario === true) {
       peach.gameWon();
       peach.gameLost();
+      setHighScore();
     }
     else {
 
@@ -131,6 +132,17 @@ function animate(){
       barrel8.draw();
       barrel9.draw();
       barrel10.draw();
+
+      barrel1.addScore();
+      barrel2.addScore();
+      barrel3.addScore();
+      barrel4.addScore();
+      barrel5.addScore();
+      barrel6.addScore();
+      barrel7.addScore();
+      barrel8.addScore();
+      barrel9.addScore();
+      barrel10.addScore();
 
       changeScore();
       changeLives();

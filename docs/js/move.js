@@ -135,7 +135,7 @@ setInterval(function(){
   // JUMP
 
 
-  if (spaceDown === true && count >= 10) {
+  if (spaceDown === true && count >= 5) {
     if (gravity <= 0) {
       count = 0;
       jumped = true;
@@ -146,7 +146,7 @@ setInterval(function(){
     }
   }
 
-  else if (spaceDown === true && count < 10 && jumped === false) {
+  else if (spaceDown === true && count < 5 && jumped === false) {
     count++;
     console.log("count", count);
     gravity = 6;
@@ -171,9 +171,6 @@ if (spaceDown === false) {
     }
   }
 }
-
-
-
 
 
 }, 60);

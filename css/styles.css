@@ -71,7 +71,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0);
 }
 
-button {
+#begin-game {
   font-family: 'Press Start 2P', cursvie;
   color: red;
   border-radius: 10px;
@@ -80,6 +80,32 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
+  margin-top: -70px;
+  margin-left: -63px;
+}
+
+#win-game {
+  font-family: 'Press Start 2P', cursvie;
+  color: red;
+  border-radius: 10px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -118px;
+}
+
+#lose-game {
+  font-family: 'Press Start 2P', cursvie;
+  color: red;
+  border-radius: 10px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -118px;
 }

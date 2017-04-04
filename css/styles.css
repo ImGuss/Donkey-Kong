@@ -74,8 +74,12 @@ h1 {
 button {
   font-family: 'Press Start 2P', cursvie;
   color: red;
-  display: block;
-  margin: 25% auto;
   border-radius: 10px;
   background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
 }

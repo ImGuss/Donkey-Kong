@@ -5,6 +5,7 @@ function Barrel() {
   this.y = 160;
   var that = this;
   this.collided = false;
+  this.velocity = 4;
 
   this.move = function() {
     setInterval(function() {
@@ -14,10 +15,10 @@ function Barrel() {
 
         // if on the ladder it falls down to second level
         if (that.x === 32) {
-          that.y += 2;
+          that.y += that.velocity;
           // if not on the ladder continue going left
         } else {
-          that.x -= 2;
+          that.x -= that.velocity;
           // descent
           if (that.x === 104 || that.x === 232 || that.x === 360 || that.x === 488) {
             that.y += 8;
@@ -29,10 +30,10 @@ function Barrel() {
 
         // if on the ladder it falls down to third level
         if (that.x === 544) {
-          that.y += 2;
+          that.y += that.velocity;
           // if not on ladder it continues going right
         } else {
-          that.x += 2;
+          that.x += that.velocity;
           // descent
           if (that.x === 120 || that.x === 248 || that. x === 376 || that.x === 504) {
             that.y += 8;
@@ -41,7 +42,7 @@ function Barrel() {
 
         // if on the third level continue going left
       } else if (that.y >= 480) {
-        that.x -= 2;
+        that.x -= that.velocity;
         // descent
         if (that.x === 104 || that.x === 232 || that.x === 360 || that.x === 488) {
           that.y += 8;
@@ -81,16 +82,38 @@ function Barrel() {
 
 }
 
-var barrel1  = new Barrel();
-var barrel2  = new Barrel();
-var barrel3  = new Barrel();
-var barrel4  = new Barrel();
-var barrel5  = new Barrel();
-var barrel6  = new Barrel();
-var barrel7  = new Barrel();
-var barrel8  = new Barrel();
-var barrel9  = new Barrel();
-var barrel10 = new Barrel();
+var barrel1   = new Barrel();
+var barrel2   = new Barrel();
+var barrel3   = new Barrel();
+var barrel4   = new Barrel();
+var barrel5   = new Barrel();
+var barrel6   = new Barrel();
+var barrel7   = new Barrel();
+var barrel8   = new Barrel();
+var barrel9   = new Barrel();
+var barrel10  = new Barrel();
+
+var barrel11  = new Barrel();
+var barrel12  = new Barrel();
+var barrel13  = new Barrel();
+var barrel14  = new Barrel();
+var barrel15  = new Barrel();
+var barrel16  = new Barrel();
+var barrel17  = new Barrel();
+var barrel18  = new Barrel();
+var barrel19  = new Barrel();
+var barrel20  = new Barrel();
+
+var barrel21  = new Barrel();
+var barrel22  = new Barrel();
+var barrel23  = new Barrel();
+var barrel24  = new Barrel();
+var barrel25  = new Barrel();
+var barrel26  = new Barrel();
+var barrel27  = new Barrel();
+var barrel28  = new Barrel();
+var barrel29  = new Barrel();
+var barrel30  = new Barrel();
 
 
 
@@ -106,39 +129,120 @@ function moveBarrels(){
 
   setTimeout(function() {
     barrel3.move();
-  }, 4000);
-
-  setTimeout(function() {
-    barrel4.move();
   }, 6000);
 
   setTimeout(function() {
-    barrel5.move();
-  }, 8000);
-
-  setTimeout(function() {
-    barrel6.move();
-    console.log('this works 6');
+    barrel4.move();
   }, 10000);
 
   setTimeout(function() {
-    barrel7.move();
-    console.log('this works 7');
-  }, 12000);
-
-  setTimeout(function() {
-    barrel8.move();
-    console.log('this works 8');
+    barrel5.move();
   }, 14000);
 
   setTimeout(function() {
+    barrel6.move();
+  }, 18000);
+
+  setTimeout(function() {
+    barrel7.move();
+  }, 22000);
+
+  setTimeout(function() {
+    barrel8.move();
+  }, 26000);
+
+  setTimeout(function() {
     barrel9.move();
-    console.log('this works 9');
-  }, 16000);
+  }, 30000);
 
   setTimeout(function() {
     barrel10.move();
-    console.log('this works 10');
-  }, 18000);
+  }, 34000);
+
+
+
+
+  setTimeout(function() {
+    barrel11.move();
+  }, 38000);
+
+  setTimeout(function() {
+    barrel12.move();
+  }, 42000);
+
+  setTimeout(function() {
+    barrel13.move();
+  }, 46000);
+
+  setTimeout(function() {
+    barrel14.move();
+  }, 50000);
+
+  setTimeout(function() {
+    barrel15.move();
+  }, 54000);
+
+  setTimeout(function() {
+    barrel16.move();
+  }, 58000);
+
+  setTimeout(function() {
+    barrel17.move();
+  }, 62000);
+
+  setTimeout(function() {
+    barrel18.move();
+  }, 66000);
+
+  setTimeout(function() {
+    barrel19.move();
+  }, 70000);
+
+  setTimeout(function() {
+    barrel20.move();
+  }, 74000);
+
+
+
+
+  setTimeout(function() {
+    barrel21.move();
+  }, 78000);
+
+  setTimeout(function() {
+    barrel22.move();
+  }, 82000);
+
+  setTimeout(function() {
+    barrel23.move();
+  }, 86000);
+
+  setTimeout(function() {
+    barrel24.move();
+  }, 90000);
+
+  setTimeout(function() {
+    barrel25.move();
+  }, 94000);
+
+  setTimeout(function() {
+    barrel26.move();
+  }, 98000);
+
+  setTimeout(function() {
+    barrel27.move();
+  }, 102000);
+
+  setTimeout(function() {
+    barrel28.move();
+  }, 106000);
+
+  setTimeout(function() {
+    barrel29.move();
+  }, 110000);
+
+  setTimeout(function() {
+    barrel30.move();
+  }, 114000);
 
 }

@@ -59,6 +59,8 @@ $(window).keyup(function(e) {
 var count = 0;
 // Used for the fall function below. needs to be global
 var gravity;
+// Used to see if player already jumped and space bar isn't let go
+var jumped = false;
 
 
 // MOVE FUNCTIONS
@@ -130,28 +132,48 @@ setInterval(function(){
     }
   }
 
-
   // JUMP
 
-  if (spaceDown === true) {
-    count++;
-    gravity = 6;
-    if (count === 1) {
 
+  if (spaceDown === true && count >= 10) {
+    if (gravity <= 0) {
+      count = 0;
+      jumped = true;
+    }
+    else {
+      peach.y += 8;
+      gravity --;
+    }
+  }
+
+  else if (spaceDown === true && count < 10 && jumped === false) {
+    count++;
+    console.log("count", count);
+    gravity = 6;
+
+    if (count === 1) {
       peach.y -= 48;
     }
   }
 
   // FALL
 
+if (spaceDown === false) {
+  jumped = false;
   if (spaceDown === false && count > 0) {
-    if (gravity === 0) {
+    if (gravity <= 0) {
       count = 0;
       return;
-    } else {
+    }
+    else {
       peach.y += 8;
       gravity --;
     }
   }
+}
+
+
+
+
 
 }, 60);

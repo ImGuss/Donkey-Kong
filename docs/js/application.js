@@ -28,6 +28,8 @@
 function startGame() {
   moveBarrels();
   animate();
+  changeHighScore();
+  setHighScore();
 }
 
 function animate(){
@@ -121,6 +123,28 @@ function animate(){
       barrel9.checkCollision();
       barrel10.checkCollision();
 
+      barrel11.checkCollision();
+      barrel12.checkCollision();
+      barrel13.checkCollision();
+      barrel14.checkCollision();
+      barrel15.checkCollision();
+      barrel16.checkCollision();
+      barrel17.checkCollision();
+      barrel18.checkCollision();
+      barrel19.checkCollision();
+      barrel20.checkCollision();
+
+      barrel21.checkCollision();
+      barrel22.checkCollision();
+      barrel23.checkCollision();
+      barrel24.checkCollision();
+      barrel25.checkCollision();
+      barrel26.checkCollision();
+      barrel27.checkCollision();
+      barrel28.checkCollision();
+      barrel29.checkCollision();
+      barrel30.checkCollision();
+
 
       barrel1.draw();
       barrel2.draw();
@@ -133,6 +157,28 @@ function animate(){
       barrel9.draw();
       barrel10.draw();
 
+      barrel11.draw();
+      barrel12.draw();
+      barrel13.draw();
+      barrel14.draw();
+      barrel15.draw();
+      barrel16.draw();
+      barrel17.draw();
+      barrel18.draw();
+      barrel19.draw();
+      barrel20.draw();
+
+      barrel21.draw();
+      barrel22.draw();
+      barrel23.draw();
+      barrel24.draw();
+      barrel25.draw();
+      barrel26.draw();
+      barrel27.draw();
+      barrel28.draw();
+      barrel29.draw();
+      barrel30.draw();
+
       barrel1.addScore();
       barrel2.addScore();
       barrel3.addScore();
@@ -144,7 +190,30 @@ function animate(){
       barrel9.addScore();
       barrel10.addScore();
 
+      barrel11.addScore();
+      barrel12.addScore();
+      barrel13.addScore();
+      barrel14.addScore();
+      barrel15.addScore();
+      barrel16.addScore();
+      barrel17.addScore();
+      barrel18.addScore();
+      barrel19.addScore();
+      barrel20.addScore();
+
+      barrel21.addScore();
+      barrel22.addScore();
+      barrel23.addScore();
+      barrel24.addScore();
+      barrel25.addScore();
+      barrel26.addScore();
+      barrel27.addScore();
+      barrel28.addScore();
+      barrel29.addScore();
+      barrel30.addScore();
+
       changeScore();
+      changeHighScore();
       changeLives();
       peach.gameWon();
     }

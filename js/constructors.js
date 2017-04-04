@@ -80,7 +80,8 @@ function Princess() {
 
   this.score = 0;
 
-  this.highScore = (localStorage.highScore === undefined) ? 0 : localStorage.highScore;
+
+  this.highScore = 0; // > this.highScore ? this.score : 0;
 
 
   this.lives = 3;

@@ -1,0 +1,114 @@
+donkey kong-esque game
+
+certain items kill you
+
+certain items slow you down
+	potion barrel that slows you down
+	potion barrel that reverses your left/right
+
+3 levels of difficulty
+
+maybe different themes
+
+different things to climb
+	wide nets
+	thing ladders
+
+
+maybe item that repairs broken ladders
+	like a hammer or something
+
+
+layout
+	stage
+	character(s)
+	game
+	win/lose message
+
+
+logic
+	construction
+		start game
+		move
+		jump
+		random barrel
+		win/lose
+		restart game
+		score
+		collision handler
+		repair
+
+DOM
+	game coordinates
+
+
+
+
+
+		TIMELINE
+
+SAT
+	STAGE
+	BARREL
+
+TUE
+	CHARACTER
+	WIN/LOSE
+
+THUR
+	// STARTGAME
+	//	MOVE
+	// DOM			COULDN’T FINISH
+	// 	MOVE
+	// STARTGAME
+
+SAT
+	// STARTGAME
+	//	JUMP
+	// DOM			COULDN’T FINISH
+	//	JUMP
+
+TUE
+	// STARTGAME
+	//	BARREL
+	// DOM			COULDN’T FINISH
+	//	BARREL
+
+THUR
+	STARTGAME
+		MOVE    DONE
+	DOM
+		MOVE    DONE
+	STARTGAME
+
+	STARTGAME
+		JUMP
+	DOM
+		JUMP
+	
+
+SAT
+	STARTGAME
+		BARREL
+	DOM
+		BARREL
+
+	STARTGAME
+		WIN/LOSE
+	DOM
+		WIN/LOSE
+	
+
+TUE
+	STARTGAME
+		COLLISION HANDLER
+	DOM
+		COLLISION HANDLER
+
+
+THUR	SCORE/RESTART | IF I HAVE TIME I CAN DO HEALING BARRELS
+	for score -> if peach.x === barrel.x && (peach.y - barrel.y) < 5
+			score += 1				       ^ or w/e #
+				 ^ or w/e #
+
+SA

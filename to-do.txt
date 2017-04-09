@@ -1,3 +1,17 @@
+
+- make a count function to see how much time it took them
+- alert for high score
+- alert for fastest time
+- add poison barrels
+- add heart barrels
+- make barrels appear more randomly
+- make broken stairs and get a hammer to fix them
+
+
+
+
+---- make it a moving sprite instead of always facing in one direction ----
+
 var princessCont  asdf  ?  asdf  : cfds
 
 ^^^^ maybe

@@ -24,6 +24,9 @@
   var princess = new Image();
   princess.src = princessSprite;
 
+  // create audio
+  const undergroundAudio = new Audio('./sounds/underground.mp3');
+
 
 function startGame() {
   moveBarrels();
@@ -41,8 +44,10 @@ function animate(){
       peach.gameWon();
       peach.gameLost();
       setHighScore();
+      undergroundAudio.pause();
     }
     else {
+      undergroundAudio.play();
 
       GameWindow.context.clearRect(0,0,640,590);
 

@@ -26,6 +26,7 @@
 
   // create audio
   const undergroundAudio = new Audio('./sounds/underground.mp3');
+  const winAudio = new Audio('./sounds/win.mp3');
 
 
 function startGame() {
@@ -45,6 +46,9 @@ function animate(){
       peach.gameLost();
       setHighScore();
       undergroundAudio.pause();
+      undergroundAudio.pause();
+      winAudio.play();
+      winAudio.loop = false;
     }
     else {
       undergroundAudio.play();

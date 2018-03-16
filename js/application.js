@@ -1,32 +1,36 @@
-  //Instantiates new Princess object called peach
-  var peach = new Princess();
+//Instantiates new Princess object called peach
+var peach = new Princess();
 
 
-  // Sprite file sources
-  var brick = "images/brick.png";
-  var princessSprite = "images/princess-left-right.png";
-  var hazard = "images/hazard-clockwise.png";
-  var marioSprite = "images/mario.png";
-  var ladderSprite = "images/ladder.png";
+// Sprite file sources
+var brick = "images/brick.png";
+var princessSprite = "images/princess-left-right.png";
+var hazard = "images/hazard-clockwise.png";
+var marioSprite = "images/mario.png";
+var ladderSprite = "images/ladder.png";
 
-  // Create Sprites
-  var brickPattern = new Sprite(brick, true);
+// Create Sprites
+var brickPattern = new Sprite(brick, true);
 
-  var ladder = new Image();
-  ladder.src = ladderSprite;
+var ladder = new Image();
+ladder.src = ladderSprite;
 
-  var mario = new Image();
-  mario.src = marioSprite;
+var mario = new Image();
+mario.src = marioSprite;
 
-  var barrel = new Image();
-  barrel.src = hazard;
+var barrel = new Image();
+barrel.src = hazard;
 
-  var princess = new Image();
-  princess.src = princessSprite;
+var princess = new Image();
+princess.src = princessSprite;
 
-  // create audio
-  const undergroundAudio = new Audio('./sounds/underground.mp3');
-  const winAudio = new Audio('./sounds/win.mp3');
+// create audio
+const undergroundAudio = new Audio('./sounds/underground.mp3');
+const winAudio = new Audio('./sounds/win.mp3');
+winAudio.loop = false;
+
+
+let loopCount = 0;
 
 
 function startGame() {
@@ -34,6 +38,14 @@ function startGame() {
   animate();
   changeHighScore();
   setHighScore();
+}
+
+function endGame() {
+  if (loopCount < 1 && peach.getMario) {
+    winAudio.play();
+    loopCount ++;
+    return;
+  }
 }
 
 function animate(){
@@ -46,9 +58,7 @@ function animate(){
       peach.gameLost();
       setHighScore();
       undergroundAudio.pause();
-      undergroundAudio.pause();
-      winAudio.play();
-      winAudio.loop = false;
+      endGame();
     }
     else {
       undergroundAudio.play();

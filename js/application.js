@@ -27,8 +27,9 @@ princess.src = princessSprite;
 // create audio
 const undergroundAudio = new Audio('./sounds/underground.mp3');
 const winAudio = new Audio('./sounds/win.mp3');
+const loseAudio = new Audio('./sounds/lose.mp3');
 winAudio.loop = false;
-
+loseAudio.loop = false;
 
 let loopCount = 0;
 
@@ -43,6 +44,12 @@ function startGame() {
 function endGame() {
   if (loopCount < 1 && peach.getMario) {
     winAudio.play();
+    loopCount ++;
+    return;
+  }
+
+  if (loopCount < 1 && peach.lives <= 0) {
+    loseAudio.play();
     loopCount ++;
     return;
   }

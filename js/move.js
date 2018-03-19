@@ -15,6 +15,9 @@ var leftDown,
     downDown,
     spaceDown;
 
+const jumpAudio = new Audio('./sounds/jump.mp3');
+jumpAudio.loop = false;
+
 
 // Check if keys are being pressed
 $(window).keydown(function(e) {
@@ -139,6 +142,8 @@ setInterval(function(){
     if (gravity <= 0) {
       count = 0;
       jumped = true;
+      jumpAudio.pause();
+
     }
     else {
       peach.y += 8;
@@ -150,6 +155,7 @@ setInterval(function(){
     count++;
     console.log("count", count);
     gravity = 6;
+    jumpAudio.play();
 
     if (count === 1) {
       peach.y -= 48;

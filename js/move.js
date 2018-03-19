@@ -153,7 +153,7 @@ setInterval(function(){
     }
     // if spacebar is pressed and the count has reached 5 and the gravity counter HASN'T reached 0
       // lower peach by 8 pixels
-      // lower gravity by 1
+      // lower gravity counter by 1
     else {
       peach.y += 8;
       gravity --;

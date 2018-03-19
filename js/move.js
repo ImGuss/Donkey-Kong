@@ -137,14 +137,23 @@ setInterval(function(){
 
   // JUMP
 
-
   if (spaceDown === true && count >= 5) {
+    // if spacebar is pressed and count has reached 5 and gravity counter has reached 0
+      // reset count to 0
+      // make jumped variable equal true
+        // i set jumped to true so that if the user continues holding space after peach reaches the floor the
+        // else if statement below doesn't trigger and a peach doesn't start jumping again. only when space is
+        // released will jumped be set back to false and the else if statement can trigger again
+      // pause the jump sound
     if (gravity <= 0) {
       count = 0;
       jumped = true;
       jumpAudio.pause();
 
     }
+    // if spacebar is pressed and the count has reached 5 and the gravity counter HASN'T reached 0
+      // lower peach by 8 pixels
+      // lower gravity by 1
     else {
       peach.y += 8;
       gravity --;
@@ -152,11 +161,17 @@ setInterval(function(){
   }
 
   else if (spaceDown === true && count < 5 && jumped === false) {
+    // if spacebar is pressed:
+      // add 1 to the counter
+      // start a gravity counter
+      // play the jump sound
+      // do not jump yet
     count++;
-    console.log("count", count);
     gravity = 6;
     jumpAudio.play();
 
+    // if spacebar is pressed and count is equal to 1
+      // jump
     if (count === 1) {
       peach.y -= 48;
     }
